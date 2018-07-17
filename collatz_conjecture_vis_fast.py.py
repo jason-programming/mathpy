@@ -75,7 +75,6 @@ def collatz_conjecture_visual(num):
             t.up()
             t.setposition(last_pos)
             t.setheading(last_head)
-            #t.color((random.randint(0,1000))/1000,(random.randint(0,1000))/1000,(random.randint(0,1000))/1000)
             h = math.log(step)/5.0
             if (h > 1.0):
                 h = 1.0
@@ -100,12 +99,9 @@ def collatz_conjecture_visual(num):
             dict_head[step, n] = last_head = t.heading()
 
             if (invisible()):
-                #print ("break at ", start)
                 break
 
     screen.update()
 
 for x in range(1,1000000):
     collatz_conjecture_visual(x)
-
-input()
